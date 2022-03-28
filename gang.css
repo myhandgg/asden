@@ -1,0 +1,221 @@
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Spartan', sans-serif;
+    margin:0;
+    font-size: 13px;
+    background-color: #EEE;
+}
+
+/* Start Golbal Ruels */
+
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* End Golbal Rules */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Medium */
+
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+
+/* Large */
+
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+
+/* large = 1170px */
+
+.container{
+    margin-top:50px;
+    display: grid;
+    grid-template-areas: 
+    "card1 card1 card2 card5"
+    "card3 card4 card4 card5";
+    gap: 20px;
+}
+
+/* Start Card 1 */
+
+.card1{
+    grid-area: card1;
+    background-color: var(--Moderate-violet);
+}
+
+.card1 img{
+    border: 2px solid var(--Moderate-violet);
+}
+
+.card1 .info h3{
+    color: var(--White);
+}
+
+.card1 span{
+    color: var(--White);
+    margin-bottom: 20px;
+}
+
+/* End Card 1 */
+
+/* Start Card 2 */
+
+.card2{
+    grid-area: card2;
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.card2 span{
+    color: var(--White);
+    margin-bottom: 20px;
+}
+
+
+/* End card 2 */
+
+/* Start Card 3 */
+
+.card3{
+    grid-area: card3;
+    background-color: white;
+}
+
+.card3 span{
+    color: var(--Very-dark-grayish-blue);
+    margin-bottom: 20px;
+}
+
+.card3 p{
+    color: black;
+}
+
+/* End Card 3 */
+/* Start Card 4 */
+.card4{
+    grid-area: card4;
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.card4 img{
+    border: 2px solid var(--Moderate-violet);
+}
+
+.card4 span{
+    color: var(--White);
+    margin-bottom: 20px;
+}
+
+.card4 p{
+    color: white;
+}
+
+/* End Card 4 */
+
+/* Start Card 5 */
+
+.card5{
+    grid-area: card5;
+    background-color: var(--White);
+}
+
+.card5 span{
+    color: var(--Very-dark-grayish-blue);
+    margin-bottom: 20px;
+}
+
+.card5 p{
+    color: black;
+}
+
+/* End Card 5 */
+
+.parent .container .head {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.parent .container .content{
+    padding: 0 20px 20px 20px;
+}
+
+.card1 ,
+.card2 ,
+.card3 ,
+.card4 ,
+.card5{
+    border-radius: 10px;
+}
+
+.parent .container .image {
+    margin-right: 20px;
+}
+
+.parent .container img {
+    border-radius: 50%;
+    width: 40px;
+}
+
+.parent .container .content span{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card1 ,
+.card2 ,
+.card4 h3{
+    color:white;
+}
+
+h3 ,
+h3 + p{
+    margin: 0;
+}
+
+.parent .container span{
+    line-height: 1.4;
+}
+
+.parent .container p {
+    line-height: 1.6;
+    opacity: .5;
+    margin-bottom: 0;
+}
+
+@media (max-width:768px){
+    .container{
+        display: block;
+        margin:0;
+    }
+    .card1,
+    .card2,
+    .card3,
+    .card4{
+        margin-bottom: 20px;
+    }
+}
